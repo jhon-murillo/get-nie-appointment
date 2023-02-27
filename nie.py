@@ -5,9 +5,10 @@ from selenium.webdriver.firefox.options import Options
 options = Options()
 driver = Firefox()
 
+time.sleep(999)
+
 #scroll to bottom of page
-def wait(time):
-    WebDriverWait(driver, time)
+    
 def scroll():
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
