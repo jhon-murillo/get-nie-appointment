@@ -1,5 +1,6 @@
 from selenium_firefox import Firefox
 import sys
+import time
 
 driver = Firefox()
 
