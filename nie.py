@@ -1,8 +1,6 @@
 from selenium_firefox import Firefox
 import time
-from selenium.webdriver.firefox.options import Options
 
-options = Options()
 driver = Firefox()
 
 time.sleep(999)
