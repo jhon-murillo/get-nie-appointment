@@ -5,7 +5,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 import sys
 
-driver = webdriver.Firefox()
+driver = webdriver.Firefox(executable_path="./geckodriver")
+
 
 #scroll to bottom of page
     
