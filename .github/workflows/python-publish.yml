@@ -24,7 +24,7 @@ jobs:
         python-version: '3.10'
     - name: Install dependencies
       run: |
-        sudo apt-get install firefox-geckodriver
+        sudo apt-get install firefox firefox-geckodriver
         python -m pip install selenium
     - name: Run script
       run: python nie.py Castellón AU922353 "JHON JAIRO MURILLO GIRALDO" COLOMBIA 1987 644870178 jhonmurillosam@outlook.com "AUT. DE RESIDENCIA TEMPORAL POR CIRCUNS. EXCEPCIONALES POR ARRAIGO"
