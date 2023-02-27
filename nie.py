@@ -1,5 +1,4 @@
 from selenium_firefox import Firefox
-import sys
 import time
 from selenium.webdriver.firefox.options import Options
 
