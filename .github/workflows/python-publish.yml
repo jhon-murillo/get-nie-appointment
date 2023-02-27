@@ -25,8 +25,9 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get install firefox
+        mkdir -p drivers
         wget https://github.com/mozilla/geckodriver/releases/download/v0.32.2/geckodriver-v0.32.2-linux64.tar.gz
-        tar xvf geckodriver-v0.32.2-linux64.tar.gz && rm geckodriver-v0.32.2-linux64.tar.gz
+        tar xvf geckodriver-v0.32.2-linux64.tar.gz -C drivers/ && rm geckodriver-v0.32.2-linux64.tar.gz
         python -m pip install selenium
     - name: Run script
       run: python nie.py Castellón AU922353 "JHON JAIRO MURILLO GIRALDO" COLOMBIA 1987 644870178 jhonmurillosam@outlook.com "AUT. DE RESIDENCIA TEMPORAL POR CIRCUNS. EXCEPCIONALES POR ARRAIGO"
