@@ -1,8 +1,4 @@
 from selenium_firefox import Firefox
-from selenium.webdriver.support.ui import Select, WebDriverWait
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
 import sys
 
 driver = Firefox()
