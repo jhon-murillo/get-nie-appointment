@@ -5,11 +5,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 import sys
 
-driver = webdriver.Firefox(executable_path="./drivers/geckodriver")
-
+driver = webdriver.Firefox()
 
 #scroll to bottom of page
-    
+def wait(time):
+    WebDriverWait(driver, time)
 def scroll():
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
@@ -50,9 +50,10 @@ def go_to_conditions_page():
 
 #input basic info to ask for appointment
 def go_to_info_page(nie, name, country, expiry):
-    click_button("rdbTipoDocPas")
+    click_button("rdbTipoDocNie")
     fill_field("txtIdCitado", passport)
     fill_field("txtDesCitado", name)
+    fill_field("txtPaisNac", country)
     click_button("btnEnviar")
 
 #ask for an appointment
@@ -81,14 +82,15 @@ def add_info_compl(tel, email):
 start()
 try:
 
-    city = sys.argv[1] # as defined in the list of cities that the page has
-    passport = sys.argv[2]
-    name = sys.argv[3]
-    country = sys.argv[4]   # as defined in the list of countries that the page has ( in UPPERCASE )
-    birthyear = sys.argv[5] 
-    tel = sys.argv[6] # Spanish phone number without country code
-    email = sys.argv[7]
-    appointmentType = sys.argv[8] # as defined in the list of appointment types of the selected city
+    city =  "Castellón" # as defined in the list of cities that the page has
+    passport = "Y6990000S"
+    name = "MIKE MURILLO JARAMILLO"
+    country = "COLOMBIA"   # as defined in the list of countries that the page has ( in UPPERCASE )
+    birthyear = "2017" 
+    tel = "644870178" # Spanish phone number without country code
+    email = "jhonmurillosam@outlook.com"
+    appointmentType = "POLICIA-TOMA DE HUELLA (EXPEDICIÓN DE TARJETA), RENOVACIÓN DE TARJETA DE LARGA DURACIÓN Y DUPLICADO"
+
 
     print ("Looking for appointment of type: " + appointmentType)
     print ("\tCity of appointment: " + city)
