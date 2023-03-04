@@ -27,5 +27,6 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install selenium
+        chmod +x nie.py
     - name: Run script
       run: python nie.py
